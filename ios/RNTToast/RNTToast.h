@@ -1,9 +1,9 @@
 
-#import <React/RCTViewManager.h>
+#import <UIKit/UIKit.h>
 #import <React/RCTBridgeModule.h>
 
-@interface RNTDimension : NSObject <RCTBridgeModule>
+@interface RNTToast : NSObject <RCTBridgeModule>
 
-+ (void)bind:(RCTRootView *)rootView;
++ (void)bind:(UIView *)rootView;
 
 @end

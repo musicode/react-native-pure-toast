@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9D7B13812383E89500276D31 /* RNTToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B13802383E89500276D31 /* RNTToast.m */; };
 		9D7B13822383E89500276D31 /* RNTToast.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D7B137F2383E89500276D31 /* RNTToast.h */; };
+		9D7B138C2383EF1500276D31 /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B13892383EF1500276D31 /* ToastConfiguration.swift */; };
+		9D7B138D2383EF1500276D31 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B138B2383EF1500276D31 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,9 @@
 		9D7B137C2383E89500276D31 /* libRNTToast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNTToast.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7B137F2383E89500276D31 /* RNTToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTToast.h; sourceTree = "<group>"; };
 		9D7B13802383E89500276D31 /* RNTToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTToast.m; sourceTree = "<group>"; };
+		9D7B13892383EF1500276D31 /* ToastConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
+		9D7B138A2383EF1500276D31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D7B138B2383EF1500276D31 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +67,19 @@
 			children = (
 				9D7B137F2383E89500276D31 /* RNTToast.h */,
 				9D7B13802383E89500276D31 /* RNTToast.m */,
+				9D7B13882383EF1500276D31 /* Toast */,
 			);
 			path = RNTToast;
+			sourceTree = "<group>";
+		};
+		9D7B13882383EF1500276D31 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				9D7B13892383EF1500276D31 /* ToastConfiguration.swift */,
+				9D7B138A2383EF1500276D31 /* Info.plist */,
+				9D7B138B2383EF1500276D31 /* Toast.swift */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7B138C2383EF1500276D31 /* ToastConfiguration.swift in Sources */,
+				9D7B138D2383EF1500276D31 /* Toast.swift in Sources */,
 				9D7B13812383E89500276D31 /* RNTToast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

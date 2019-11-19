@@ -1,24 +1,17 @@
 
 import { NativeModules } from 'react-native'
 
-const { RNTDimension } = NativeModules
+const { RNTToast } = NativeModules
 
 export default {
 
-  getStatusBarHeight() {
-    return RNTDimension.getStatusBarHeight()
-  },
-
-  getNavigationBarInfo() {
-    return RNTDimension.getNavigationBarInfo()
-  },
-
-  getScreenSize() {
-    return RNTDimension.getScreenSize()
-  },
-
-  getSafeArea() {
-    return RNTDimension.getSafeArea()
-  },
+  show(options) {
+    RNTToast.show({
+      type: options.type || 'text',
+      text: options.text || 'default text',
+      duration: options.duration || 'short',
+      position: options.position || 'center',
+    })
+  }
 
 }

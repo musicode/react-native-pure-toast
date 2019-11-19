@@ -1,23 +1,24 @@
 package com.github.musicode.toast
 
-import android.os.Build
 import com.facebook.react.bridge.*
-import android.util.DisplayMetrics
-import android.view.Display
-import android.content.Context.WINDOW_SERVICE
-import android.view.WindowManager
-import java.lang.Exception
+import com.github.herokotlin.toast.Toast
 
 class RNTToastModule(private val reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+
+    private val toast = Toast(reactContext)
 
     override fun getName(): String {
         return "RNTToast"
     }
 
     @ReactMethod
-    fun show(promise: Promise) {
-
-
+    fun show(options: ReadableMap) {
+        toast.show(
+            options.getString("text")!!,
+            options.getString("type")!!,
+            options.getString("duration")!!,
+            options.getString("position")!!
+        )
     }
 
 }

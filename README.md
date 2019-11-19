@@ -1,13 +1,13 @@
-# react-native-pure-dimension
+# react-native-pure-toast
 
-This is a module which help you get screen dimension info.
+This is a module which help you to show a toast like android.
 
 ## Installation
 
 ```
-npm i react-native-pure-dimension
+npm i react-native-pure-toast
 // link below 0.60
-react-native link react-native-pure-dimension
+react-native link react-native-pure-toast
 ```
 
 ## Setup
@@ -17,13 +17,13 @@ react-native link react-native-pure-dimension
 modify `AppDelegate.m`
 
 ```oc
-#import <RNTDimension.h>
+#import <RNTToast.h>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   ...
   // add this line
-  [RNTDimension bind:rootView];
+  [RNTToast bind:rootView];
   return YES;
 }
 ```
@@ -35,27 +35,15 @@ nothing to do.
 ## Usage
 
 ```js
-import dimension from 'react-native-pure-dimension'
+import toast from 'react-native-pure-toast'
 
-dimension.getStatusBarHeight().then(data => {
-  data.height
+toast.show({
+  text: 'hello world',
+  // text|success|error, default value: text
+  type: 'text',
+  // short|long, default value: short
+  duration: 'short',
+  // center|top|bottom, default value: center
+  position: 'center',
 })
-
-dimension.getNavigationBarInfo().then(data => {
-  data.height
-  data.visible
-})
-
-dimension.getScreenSize().then(data => {
-  data.width
-  data.height
-})
-
-dimension.getSafeArea().then(data => {
-  data.top
-  data.right
-  data.bottom
-  data.left
-})
-
 ```
