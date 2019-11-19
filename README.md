@@ -28,6 +28,8 @@ modify `AppDelegate.m`
 }
 ```
 
+`Targets` -> `Build Phase` -> `Copy Bundle Resources`, click `+` button, pick the folder `node_modules/react-native-pure-toast/ios/RNTToast/Assets.xcassets` to your project.
+
 ### Android
 
 nothing to do.

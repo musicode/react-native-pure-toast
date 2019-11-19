@@ -33,6 +33,7 @@
 		9D7B13892383EF1500276D31 /* ToastConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
 		9D7B138A2383EF1500276D31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D7B138B2383EF1500276D31 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		9D7B13902384002D00276D31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 				9D7B137F2383E89500276D31 /* RNTToast.h */,
 				9D7B13802383E89500276D31 /* RNTToast.m */,
 				9D7B13882383EF1500276D31 /* Toast */,
+				9D7B13902384002D00276D31 /* Assets.xcassets */,
 			);
 			path = RNTToast;
 			sourceTree = "<group>";
