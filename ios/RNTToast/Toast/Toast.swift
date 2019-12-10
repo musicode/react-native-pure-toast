@@ -26,7 +26,9 @@ class ToastTask {
     private var view: UIView
     private var configuration: ToastConfiguration
     
+    private var currentTask: ToastTask?
     private var currentToast: UIView?
+    
     private var hideTimer: Timer?
     private var isAnimating = false
     
@@ -38,6 +40,11 @@ class ToastTask {
     }
     
     @objc public func show(text: String, type: String, duration: String, position: String) {
+        
+        // 一样的内容就算了
+        if currentTask?.text == text {
+            return
+        }
         
         queue.append(ToastTask(text: text, type: type, duration: duration, position: position))
         
@@ -259,6 +266,7 @@ class ToastTask {
         
         toast.alpha = 0.4
         
+        currentTask = task
         currentToast = toast
         isAnimating = true
         
@@ -309,6 +317,8 @@ class ToastTask {
         }
         
         isAnimating = true
+        
+        currentTask = nil
         currentToast = nil
         
         UIView.animate(withDuration: 0.1, animations: {
