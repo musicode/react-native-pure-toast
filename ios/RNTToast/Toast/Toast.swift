@@ -40,19 +40,17 @@ class ToastTask {
     }
     
     @objc public func show(text: String, type: String, duration: String, position: String) {
-        
+
         // 一样的内容就算了
         if currentTask?.text == text {
             return
         }
-        
+
         queue.append(ToastTask(text: text, type: type, duration: duration, position: position))
         
         // 如果有正在显示的 toast，则先隐藏
         if currentToast != nil {
-            DispatchQueue.main.async {
-                self.hide()
-            }
+            hide()
             return
         }
         
@@ -62,9 +60,7 @@ class ToastTask {
             return
         }
         
-        DispatchQueue.main.async {
-            self.show()
-        }
+        show()
         
     }
     

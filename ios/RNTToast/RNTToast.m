@@ -1,9 +1,7 @@
-
 #import "RNTToast.h"
-
 #import "react_native_pure_toast-Swift.h"
 
-static Toast *toast = nil;
+Toast *toast;
 
 @implementation RNTToast
 
@@ -13,6 +11,10 @@ static Toast *toast = nil;
     
     toast = [[Toast alloc] initWithView:rootView configuration:configuration];
     
+}
+
+- (dispatch_queue_t)methodQueue {
+  return dispatch_get_main_queue();
 }
 
 RCT_EXPORT_MODULE(RNTToast);
