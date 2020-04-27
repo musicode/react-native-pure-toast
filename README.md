@@ -1,5 +1,7 @@
 # react-native-pure-toast
 
+> This repo is deprecated, please visit the new [toast](https://github.com/react-native-hero/toast) repo.
+
 This is a module which help you to show a toast like android.
 
 ## Installation
